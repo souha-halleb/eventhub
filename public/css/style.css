@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --primary: #2563eb;
   --primary-dark: #1e40af;
@@ -31,19 +30,16 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 2rem; /* espace autour de tout le contenu */
-  background-color: #f8fafc; /* couleur de fond de la page */
-  color: #0f172a; /* couleur du texte */
+  padding: 2rem; 
+  background-color: #f8fafc; 
+  color: #0f172a; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
 }
-
-
-/* Pour que les sections internes s’adaptent et aient aussi un peu d’air */
 .header-content,
 .main,
 .events-grid,
 .event-details {
-  margin: 1rem auto; /* marge verticale pour séparer les sections */
+  margin: 1rem auto; 
 }
 
 
@@ -52,8 +48,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
-/* HEADER */
 .header {
     background-color: #7a91d6;
     color: #fff;
@@ -557,7 +551,6 @@ color: #0057ff;}
     font-size: 15px;
 }
 
-
 .sidebar-card h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -567,9 +560,6 @@ color: #0057ff;}
   border-bottom: 2px solid var(--border-color);
   letter-spacing: -0.01em;
 }
-
-
-
 .stat-item:last-of-type {
   border-bottom: none;
 }
@@ -606,13 +596,9 @@ color: #0057ff;}
     transform: translateY(-1px);
     box-shadow: 0 6px 18px rgba(0, 87, 255, 0.3);
 }
-
-
 .reserve-btn:active {
   transform: translateY(0px);
 }
-
-/* STATUS BADGE */
 .status-badge {
     display: inline-block;
     padding: 5px 12px;
@@ -642,7 +628,6 @@ color: #0057ff;}
   color: #7f1d1d;
 }
 
-/* ANIMATIONS */
 @keyframes fadeInScale {
   from {
     opacity: 0;
@@ -662,8 +647,6 @@ color: #0057ff;}
     opacity: 0;
   }
 }
-
-/* SCROLL TO TOP BUTTON */
 .scroll-to-top {
   position: fixed;
   bottom: 1.5rem;

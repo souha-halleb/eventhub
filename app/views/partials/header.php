@@ -9,8 +9,6 @@
 <body>
     <header class="header">
        <div class="logo">
-   
-   
     📅 EventHub
 </div>
 

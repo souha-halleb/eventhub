@@ -1,6 +1,5 @@
 <?php
 $page_title = 'Events';
-
 ?>
 
 <div class="page-header">
@@ -15,15 +14,9 @@ $page_title = 'Events';
     </div>
     <div class="filters-container"></div>
 </div>
-
-
     <div class="events-grid">
     <?php foreach ($events as $event): 
-        
-        // Récupérer l'ID de l'événement
         $eventId = $event['id'];
-
-        // Compter les réservations
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM reservations WHERE event_id = ?");
         $stmt->execute([$eventId]);
         $attendees = $stmt->fetchColumn();
@@ -44,7 +37,6 @@ $page_title = 'Events';
 
                 <div class="event-meta">
                     <div class="meta-item">
-                        <!-- Icône calendrier -->
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -54,7 +46,6 @@ $page_title = 'Events';
                         <span><?= date('M d, Y', strtotime($event['event_date'])) ?></span>
                     </div>
                     <div class="meta-item">
-                        <!-- Icône localisation -->
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
@@ -62,8 +53,6 @@ $page_title = 'Events';
                         <span><?= $event['location'] ?></span>
                     </div>
                 </div>
-
-                <!-- Barre de remplissage des seats -->
                 <div class="event-capacity">
                     <div class="capacity-info">
                         <span class="capacity-label">Seats</span>

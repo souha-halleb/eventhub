@@ -1,20 +1,9 @@
-// Event Hub - Interactive Features
 document.addEventListener("DOMContentLoaded", () => {
-  // Smooth scroll animations
   observeElements()
-
-  // Add filter functionality
   initializeFilters()
-
-  // Add search functionality
   initializeSearch()
-
-  // Smooth page transitions
   initializePageTransitions()
-
-  // Enhanced hover effects for cards
   initializeCardHoverEffects()
-
   initializeScrollToTop()
 })
 
@@ -33,8 +22,6 @@ function observeElements() {
       rootMargin: "0px 0px -100px 0px",
     },
   )
-
-  // Observe all event cards
   document.querySelectorAll(".event-card").forEach((card) => {
     card.style.opacity = "0"
     card.style.transform = "translateY(20px)"
@@ -42,7 +29,6 @@ function observeElements() {
     observer.observe(card)
   })
 }
-
 function initializeFilters() {
   const filterContainer = document.querySelector(".filters-container")
   const statuses = ["ALL", "ACTIVE", "UPCOMING", "CANCELLED",'COMPLETED','PLANNED']
@@ -79,7 +65,6 @@ function filterEvents(status) {
     }
   })
 }
-
 function initializeSearch() {
   const searchInput = document.querySelector(".search-input")
 
@@ -116,8 +101,6 @@ function initializePageTransitions() {
     })
   })
 }
-
-// Enhanced hover effects for cards
 function initializeCardHoverEffects() {
   const cards = document.querySelectorAll(".event-card")
 
@@ -136,20 +119,14 @@ function initializeScrollToTop() {
   const scrollBtn = document.getElementById("scrollToTopBtn")
 
   if (!scrollBtn) return
-
-  // Afficher/masquer le bouton lors du scroll
   window.addEventListener("scroll", () => {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
     const header = document.querySelector(".header")
-
-    // Afficher le bouton après 300px de scroll
     if (scrollTop > 300) {
       scrollBtn.classList.add("visible")
     } else {
       scrollBtn.classList.remove("visible")
     }
-
-    // Update header shadow
     if (header) {
       if (scrollTop > 50) {
         header.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)"
@@ -158,8 +135,6 @@ function initializeScrollToTop() {
       }
     }
   })
-
-  // Scroll smooth vers le haut
   scrollBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
@@ -167,7 +142,6 @@ function initializeScrollToTop() {
     })
   })
 }
-
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   document.documentElement.style.scrollBehavior = "auto"
   const style = document.createElement("style")

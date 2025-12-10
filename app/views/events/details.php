@@ -1,7 +1,4 @@
 <?php
-
-
-// Vérifier que $event existe
 if (!isset($event) || !$event) {
     echo "<p>Event not found.</p>";
     return;
@@ -19,11 +16,8 @@ $backUrl = $routes['list'];
 <div class="back-link-container">
     <a href="<?= $backUrl ?>" class="back-link">&larr; Back to Events</a>
 </div>
-
-
 <div class="event-details">
     <div class="event-main">
-        <!-- IMAGE DE L'ÉVÉNEMENT -->
         <div class="event-image">
             <img src="<?= !empty($event['image']) ? $event['image'] : 'images/default-event.jpg' ?>" 
                  alt="<?= $event['title'] ?>" loading="lazy">
