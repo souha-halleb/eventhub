@@ -8,18 +8,17 @@
 </head>
 <body>
     <header class="header">
-       <div class="logo">
-    📅 EventHub
-</div>
-
-    </header>
-
+  <div class="header-content">
+    <div class="header-left">
+<div class="logo">📅 EventHub — Event Platform</div>
+    </div>
+  </div>
+</header>
     <button class="scroll-to-top" id="scrollToTopBtn" title="Retour au haut">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
-
     <script src="./js/main.js"></script>
 </body>
 </html>

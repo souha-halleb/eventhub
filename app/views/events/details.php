@@ -16,6 +16,7 @@ $backUrl = $routes['list'];
 <div class="back-link-container">
     <a href="<?= $backUrl ?>" class="back-link">&larr; Back to Events</a>
 </div>
+
 <div class="event-details">
     <div class="event-main">
         <div class="event-image">
@@ -23,8 +24,17 @@ $backUrl = $routes['list'];
                  alt="<?= $event['title'] ?>" loading="lazy">
         </div>
 
-        <h1 class="event-title"><?= $event['title'] ?></h1>
-        
+        <div class="event-header-with-actions">
+            <h1 class="event-title"><?= $event['title'] ?></h1>
+            <button class="open-stats-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="M4 9h16M4 15h16"></path>
+                </svg>
+                Reserve
+            </button>
+        </div>
+
         <div class="event-status">
             <span class="status-badge status-<?= strtolower($event['status']) ?>">
                 <?= strtoupper($event['status']) ?>
@@ -61,10 +71,15 @@ $backUrl = $routes['list'];
             </div>
         </div>
     </div>
+</div>
 
-    <aside class="event-sidebar">
-        <div class="sidebar-card">
+<div id="statsModal" class="stats-modal">
+    <div class="stats-modal-content">
+        <div class="stats-modal-header">
             <h3>Quick Stats</h3>
+            <button class="close-modal-btn">&times;</button>
+        </div>
+        <div class="stats-modal-body">
             <div class="stat-item">
                 <span class="stat-label">Total Capacity</span>
                 <span class="stat-value"><?= $event['seats'] ?></span>
@@ -79,5 +94,5 @@ $backUrl = $routes['list'];
             </div>
             <button class="reserve-btn">Reserve Spot</button>
         </div>
-    </aside>
+    </div>
 </div>

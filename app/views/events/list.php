@@ -1,12 +1,10 @@
 <?php
 $page_title = 'Events';
 ?>
-
 <div class="page-header">
     <h1>Upcoming Events</h1>
     <p class="subtitle">Discover and join amazing events near you</p>
 </div>
-
 <div class="search-filters-container">
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Search events by name or location...">
@@ -65,7 +63,6 @@ $page_title = 'Events';
 <a href="<?= $routes['details'] . $event['id'] ?>" class="view-details-btn">
     View Details
 </a>
-
             </div>
         </div>
     <?php endforeach; ?>
