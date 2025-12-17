@@ -286,7 +286,7 @@ body {
 }
 
 .event-card-image img {
-  width: 70%;                
+  width: 96%;                
   height: auto;               
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -336,10 +336,20 @@ body {
   border-color: rgba(239, 68, 68, 0.3);
 }
 
+.event-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
 .event-image img {
-  max-width: 100%;
+  width: 80%;          
+  max-height: 300px;   
   height: auto;
 }
+
+
 .event-card-content {
   padding: 0.875rem;
   display: flex;
@@ -472,12 +482,17 @@ body {
 }
 
 .event-main {
-  width: 100%;
+  width: 96%;
   background: #fff;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  height: auto;       /* s’adapte au contenu */
+  max-width: 1200px;  /* optionnel, propre */
+  margin: 0 auto;     /* centré */
 }
+
 .event-header-with-actions {
   display: flex;
   justify-content: space-between;
